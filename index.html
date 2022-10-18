@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoApp</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="screen login hidden">
+      <div class="status-bar">
+        <div class="status-bar__column">
+          <span>No Service</span>
+          <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+          <span class="clock">18:63</span>
+        </div>
+        <div class="status-bar__column">
+          <!--lock Icon-->
+          <span>200%</span>
+          <i class="fas fa-battery-full fa-lg"></i>
+          <i class="fas fa-bolt"></i>
+        </div>
+      </div>
+      <div class="login_title">
+        <div>Things</div>
+        <span>T</span><span>o</span><span>D</span><span>o</span>
+      </div>
+      <form action="#" class="login_input">
+        <div class="input_username">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Username" required />
+        </div>
+        <div class="input_password">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Password" />
+        </div>
+        <div class="input_button">
+          <button>LOGIN</button>
+        </div>
+      </form>
+      <div class="login-sns">
+        <div class="login-sns_bar">
+          <span>OR</span>
+        </div>
+        <div class="login-sns_indicate">login using social media</div>
+      </div>
+      <div class="login-sns_btns">
+        <div class="login-sns_btns--fb">
+          <i class="fab fa-facebook-f"></i>
+        </div>
+        <div class="login-sns_btns--twitter">
+          <i class="fab fa-twitter"></i>
+        </div>
+        <div class="login-sns_btns--google">
+          <i class="fab fa-google-plus-g"></i>
+        </div>
+      </div>
+    </div>
+    <div class="screen todo hidden">
+      <div class="status-bar">
+        <div class="status-bar__column">
+          <span>No Service</span>
+          <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+          <span class="clock">18:63</span>
+        </div>
+        <div class="status-bar__column">
+          <!--lock Icon-->
+          <span>200%</span>
+          <i class="fas fa-battery-full fa-lg"></i>
+          <i class="fas fa-bolt"></i>
+        </div>
+      </div>
+      <div class="todo-bar">
+        <div class="todo-bar__head">
+          <div class="todo-bar__head--left">
+            <i class="fas fa-bars"></i> <span>Things To Do</span>
+          </div>
+          <div class="todo-bar__head--right">
+            <i class="fas fa-bell"></i>
+            <i class="fas fa-sign-out-alt logout"></i>
+          </div>
+        </div>
+        <form id="todo-form">
+          <input type="text" placeholder="Add Task" />
+          <i class="fas fa-search"></i>
+        </form>
+        <div class="todo-bar__tab">
+          <div>DAILY</div>
+          <div>WEEKLY</div>
+          <div>MONTHLY</div>
+        </div>
+      </div>
+      <div class="todo-summary">
+        <div class="todo-summary__info">
+          <div>
+            <span>Hello</span>
+            <span id="username">John</span>
+          </div>
+          <div>TODAY</div>
+          <div>15 Jan, 2020</div>
+        </div>
+        <div class="todo-summary__result">
+          <div>Completed</div>
+          <div>
+            <span id="completed_num">0</span><span>/</span
+            ><span id="total_num">0</span>
+          </div>
+        </div>
+      </div>
+
+      <ul id="todo-list"></ul>
+    </div>
+  </body>
+  <script src="./js/logout.js"></script>
+  <script src="./js/clock.js"></script>
+  <script src="./js/greetings.js"></script>
+  <script src="./js/todo.js"></script>
+  <script
+    src="https://kit.fontawesome.com/97289910c5.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

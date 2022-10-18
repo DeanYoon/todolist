@@ -1,0 +1,112 @@
+.login_title {
+  color: #6dbbff;
+  font-size: 50px;
+  margin-top: 80px;
+}
+
+.login_title span:nth-child(even) {
+  font-weight: bold;
+}
+
+.login form {
+  width: 60%;
+}
+
+.login_input div {
+  height: 45px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+.input_username,
+.input_password {
+  background-color: #c5c9cc6a;
+}
+
+.login_input i {
+  width: 10%;
+  margin: 0 2px;
+  font-size: 20px;
+  color: rgb(128, 128, 128);
+  text-align: center;
+}
+.login input {
+  width: 90%;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+.input_button button {
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-weight: 800;
+  border: none;
+  background-color: #6dbbff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.input_button button:hover {
+  background-color: #53aefe;
+}
+.input_button button:active {
+  background-color: #8bc9ff;
+}
+.login-sns {
+  color: rgba(128, 128, 128, 0.477);
+  width: 50%;
+}
+.login-sns_bar {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.477);
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.login-sns_bar span {
+  position: absolute;
+  bottom: -12px;
+  background-color: white;
+  padding: 5px;
+}
+
+.login-sns_indicate {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.login-sns_btns {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  color: white;
+  margin-top: 150px;
+}
+.login-sns_btns div {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  font-size: 25px;
+  box-shadow: 0px 0px 20px -10px black;
+  transition: all 0.2s ease-in-out;
+}
+.login-sns_btns div:hover {
+  box-shadow: 0px 0px 20px -5px black;
+  scale: 1.1;
+  cursor: pointer;
+}
+
+.login-sns_btns--fb {
+  background-color: #4267b2;
+}
+.login-sns_btns--twitter {
+  background-color: #1da1f2;
+}
+.login-sns_btns--google {
+  background-color: #db4a39;
+}
