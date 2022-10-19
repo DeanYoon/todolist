@@ -77,7 +77,6 @@ function checkTodo(event) {
   check_icon = li.querySelector(".icon-box > i:first-child");
   span.classList.toggle(clicked);
   check_icon.classList.toggle(checked);
-  console.log(li.id);
   const booleanValue = toDos.find((toDo) => toDo.id === parseInt(li.id)).done;
   if (booleanValue) {
     toDos.find((toDo) => toDo.id === parseInt(li.id)).done = false;

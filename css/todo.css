@@ -1,3 +1,6 @@
+i {
+  transition: all 0.3s ease-in-out;
+}
 .todo-bar {
   width: 100%;
   height: 200px;
@@ -48,14 +51,14 @@
 .todo-bar__tab {
   display: flex;
   justify-content: space-around;
-  margin-top: 18px;
+  margin-top: 19px;
   cursor: pointer;
 }
 .todo-bar__tab div {
   text-align: center;
   width: 33%;
   height: 100%;
-  padding: 19px 0;
+  padding: 20px 0;
 }
 .todo-bar__tab div:hover {
   background-color: #46a9ff;
@@ -174,9 +177,9 @@ li > span {
 }
 .delete {
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .delete:hover {
-  transition-duration: 0.3s;
   color: red;
 }

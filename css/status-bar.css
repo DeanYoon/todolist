@@ -2,8 +2,11 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin-top: 15px;
+  align-items: center;
+  margin-top: 10px;
   position: absolute;
+  font-size: 18px;
+  font-weight: 100;
 }
 .status-bar div {
   width: 33%;
@@ -21,4 +24,11 @@
 }
 .status-bar__column i {
   margin-left: 5px;
+}
+img {
+  width: 20px;
+  height: 20px;
+}
+#white {
+  color: white !important;
 }
