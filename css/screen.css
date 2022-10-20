@@ -1,0 +1,31 @@
+.screen {
+  width: 450px;
+  height: 800px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: inset;
+  box-shadow: 0px 0px 50px -20px black;
+  position: relative;
+  background-color: white;
+  transition: all 0.5s ease-in;
+}
+
+.flip {
+  transition-duration: 0.5s;
+  transform: rotateY(90deg);
+}
+
+@keyframes backFlip {
+  from {
+    transform: rotateY(90deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+.back-flip {
+  animation: backFlip 0.5s;
+}

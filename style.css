@@ -1,0 +1,19 @@
+@import "./reset.css";
+@import "./css/screen.css";
+@import "./css/status-bar.css";
+@import "./css/login.css";
+@import "./css/todo.css";
+html,
+body {
+  height: 100vh;
+  min-height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6dbbff;
+  font-family: sans-serif;
+}
+
+.hidden {
+  display: none;
+}
