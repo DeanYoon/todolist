@@ -24,7 +24,7 @@ async function onLoginSubmit(event) {
   screenLogin.classList.add(HIDDEN_CLASSNAME);
   screenLogin.classList.remove(FLIP_CLASSNAME);
   todo.classList.add(BACKFLIP_CLASSNAME);
-  paintGreetings(username);
+  await paintGreetings(username);
 }
 
 async function paintGreetings(name) {

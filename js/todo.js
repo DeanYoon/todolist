@@ -1,6 +1,7 @@
 const toDoForm = document.querySelector("#todo-form");
 const toDoClick = document.querySelector("#todo-form i");
-const toDoInput = document.querySelector("#todo-form input");
+const toDoInput = document.querySelector("#todo-input");
+const toDoTimeInput = document.querySelector("#time-input");
 const toDoList = document.querySelector("#todo-list");
 const total_num = document.querySelector("#total_num");
 const completed_num = document.querySelector("#completed_num");
@@ -10,16 +11,19 @@ const TODOS_KEY = "todos";
 const clicked = "line-through";
 const checked = "clicked";
 
-function handleToDoSubmit(event) {
+function sleep(ms) {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
+async function handleToDoSubmit(event) {
   event.preventDefault();
   const newToDo = toDoInput.value;
   toDoInput.value = "";
-  const { hour, minute } = getTime();
   if (newToDo !== "") {
     const newTodoObj = {
       text: newToDo,
       id: Date.now(),
-      time: `${hour}:${minute}`,
+      time: toDoTimeInput.value,
       done: false,
     };
     toDos.push(newTodoObj);
@@ -29,15 +33,15 @@ function handleToDoSubmit(event) {
   }
 }
 
-function paintToDo(todo) {
+async function paintToDo(todo) {
   const li = document.createElement("li");
   const span = document.createElement("span");
   const icon_box = document.createElement("div");
   const check_icon = document.createElement("i");
   const delete_icon = document.createElement("i");
   const record_time = document.createElement("div");
-  const example = document.createAttribute("div");
   li.id = todo.id;
+  li.className = "slideDown";
   record_time.id = "time-record";
   icon_box.className = "icon-box";
 
@@ -56,7 +60,7 @@ function paintToDo(todo) {
 
   if (todo.done === true) {
     span.classList.add(clicked);
-
+    await sleep(100);
     check_icon.classList.add(checked);
   }
 
@@ -88,9 +92,28 @@ function checkTodo(event) {
   updateSummary();
 }
 
-function deleteTodo(event) {
+async function deleteTodo(event) {
   li = event.target.parentElement.parentElement;
+  ul = li.parentElement;
+  li.className = "deleted";
+  await sleep(500);
+  li.classList.add("unvisible");
+
+  const ids = ul.querySelectorAll("li");
+
+  for (let i = 0; i < ids.length; i++) {
+    if (parseInt(li.id) > parseInt(ids[i].id)) {
+      ids[i].className = "slideUp";
+    }
+  }
+
+  await sleep(500);
   li.remove();
+
+  for (let i = 0; i < ids.length; i++) {
+    ids[i].className = "";
+  }
+
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
   saveToDos();
   updateSummary();
