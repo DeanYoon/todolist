@@ -46,7 +46,6 @@ async function paintToDo(todo) {
   icon_box.className = "icon-box";
 
   li.appendChild(record_time);
-
   li.appendChild(span);
   li.appendChild(icon_box);
 
@@ -132,6 +131,7 @@ if (savedToDos !== null) {
   toDos = parsedToDos;
   parsedToDos.forEach((item) => {
     paintToDo(item);
+    console.log(item);
   });
   updateSummary();
 }
