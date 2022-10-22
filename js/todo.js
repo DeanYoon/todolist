@@ -33,7 +33,7 @@ async function handleToDoSubmit(event) {
   }
 }
 
-async function paintToDo(todo) {
+function paintToDo(todo) {
   const li = document.createElement("li");
   const span = document.createElement("span");
   const icon_box = document.createElement("div");
@@ -59,7 +59,7 @@ async function paintToDo(todo) {
 
   if (todo.done === true) {
     span.classList.add(clicked);
-    await sleep(100);
+    sleep(100);
     check_icon.classList.add(checked);
   }
 
