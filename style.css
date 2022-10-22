@@ -1,16 +1,17 @@
+@import "./css/variable.css";
 @import "./reset.css";
 @import "./css/screen.css";
 @import "./css/status-bar.css";
 @import "./css/login.css";
 @import "./css/todo.css";
-html,
-body {
+html {
   height: 100vh;
   min-height: 1000px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #6dbbff;
+  background-color: var(--bgColorLight);
+
   font-family: sans-serif;
 }
 

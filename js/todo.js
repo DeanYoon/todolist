@@ -131,7 +131,7 @@ if (savedToDos !== null) {
   toDos = parsedToDos;
   parsedToDos.forEach((item) => {
     paintToDo(item);
-    console.log(item);
+    // console.log(item);
   });
   updateSummary();
 }

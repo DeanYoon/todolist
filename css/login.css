@@ -1,5 +1,5 @@
 .login_title {
-  color: #6dbbff;
+  color: var(--bgColorLight);
   font-size: 50px;
   margin-top: 80px;
 }
@@ -43,15 +43,15 @@
   color: white;
   font-weight: 800;
   border: none;
-  background-color: #6dbbff;
+  background-color: var(--bgColorLight);
   border-radius: 5px;
   cursor: pointer;
 }
 .input_button button:hover {
-  background-color: #53aefe;
+  background-color: var(--bgColor);
 }
 .input_button button:active {
-  background-color: #8bc9ff;
+  background-color: var(--bgColorLight);
 }
 .login-sns {
   color: rgba(128, 128, 128, 0.477);

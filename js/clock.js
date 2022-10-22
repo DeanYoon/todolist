@@ -21,7 +21,7 @@ function getClock() {
   if (num % 2 === 1) {
     colon = ":";
   } else {
-    colon = " ";
+    colon = "  ";
   }
   time[0].innerHTML = `${hour}${colon}${minute}`;
   time[1].innerHTML = `${hour}${colon}${minute}`;

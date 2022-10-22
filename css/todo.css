@@ -4,7 +4,7 @@ i {
 .todo-bar {
   width: 100%;
   height: 200px;
-  background-color: #2499ff;
+  background-color: var(--bgColor);
   border-top-right-radius: 29px;
   border-top-left-radius: 29px;
   color: white;
@@ -45,7 +45,7 @@ i {
   margin: 0 25px;
 }
 #time-input {
-  width: 25%;
+  width: 28%;
   font-size: 13px;
   cursor: pointer;
   font-family: sans-serif;
@@ -62,15 +62,19 @@ i {
   justify-content: space-around;
   margin-top: 19px;
   cursor: pointer;
+  height: 24%;
 }
 .todo-bar__tab div {
-  text-align: center;
-  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33.3%;
   height: 100%;
-  padding: 20px 0;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 4px solid transparent;
 }
 .todo-bar__tab div:hover {
-  background-color: #46a9ff;
+  border-bottom: 4px solid white;
 }
 
 .todo-summary {
@@ -100,7 +104,7 @@ i {
 }
 
 .todo-summary__info > div:nth-child(2) {
-  color: #2499ff;
+  color: var(--bgColor);
   font-size: 20px;
 }
 .todo-summary__info > div:last-child {
