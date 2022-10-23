@@ -19,7 +19,7 @@ function onGeoOk(position) {
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEYS}&units=metric&lang=kr`;
-  const airPollutionUrl = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEYS}`;
+  const airPollutionUrl = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEYS}`;
 
   Promise.all([
     fetch(url).then((response) => response.json()),
@@ -44,7 +44,7 @@ function onGeoOk(position) {
     for (let i = 0; i < 2; i++) {
       weather[
         i
-      ].src = ` http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
+      ].src = ` https://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
       city[i].innerHTML = weatherData.name;
       temperature[i].innerHTML = `${weatherData.main.temp}'C`;
       airPollution[i].className = airPollutionIcon;
