@@ -95,6 +95,10 @@ async function deleteTodo(event) {
   li = event.target.parentElement.parentElement;
   ul = li.parentElement;
   li.className = "deleted";
+  /// deleting data first then animation starts
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+  saveToDos();
+  updateSummary();
   await sleep(500);
   li.classList.add("unvisible");
 
@@ -112,10 +116,6 @@ async function deleteTodo(event) {
   for (let i = 0; i < ids.length; i++) {
     ids[i].className = "";
   }
-
-  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
-  saveToDos();
-  updateSummary();
 }
 
 function saveToDos() {
