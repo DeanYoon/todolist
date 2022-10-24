@@ -16,6 +16,8 @@ i {
   margin: 45px 0 20px 0;
   font-size: 20px;
   padding: 0 25px;
+}
+.todo-bar__head i {
   cursor: pointer;
 }
 .todo-bar__head--left span {
@@ -132,7 +134,8 @@ ul {
   align-items: center;
   position: relative;
 }
-ul::-webkit-scrollbar {
+ul::-webkit-scrollbar,
+li > span::-webkit-scrollbar {
   display: none;
 }
 li {
@@ -199,11 +202,14 @@ li:hover {
   font-weight: 300;
 }
 li > span {
-  width: 70%;
+  width: 68%;
   font-weight: 600;
   position: relative;
   display: inline-block;
+  overflow-x: scroll;
+  margin-right: 2%;
 }
+
 .icon-box {
   width: 15%;
   display: flex;
